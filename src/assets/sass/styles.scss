@@ -1,0 +1,40 @@
+.grid-container{
+  top: 100px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  button{
+    padding: 20px 0px;
+    border: 1px solid #d9d9d9;
+    background-color: white;
+    font-size: 2em;
+    font-weight: lighter;
+    &:hover{
+      background-color: #737373;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .display{
+    background-color: black;
+    grid-column: 5/1;
+    color: white;
+    text-align: right;
+    font-size: 80px;
+    .operators{
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+    }
+  }
+  .zero{
+    grid-column: 1/3;
+  }
+  .top{
+    background-color: #e6e6e6;
+  }
+  .right{
+    background-color: #ffb84d;
+    color: white;
+    font-size: 2.5em;
+  }
+}

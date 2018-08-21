@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="row">
+        <div class="grid-container col-md-12">
+          <div class="display">
+            <div class="operators" v-html="operators"></div>
+            {{ display === '' ? '0' : display }}
+          </div>
+          <button class="top" @click="ac">AC</button>
+          <button class="top" @click="backspace">&larr;</button>
+          <button class="top" @click="percent">%</button>
+          <button class="right" @click="division">&#247;</button>
+          <button @click="append(7)">7</button>
+          <button @click="append(8)">8</button>
+          <button @click="append(9)">9</button>
+          <button class="right" @click="times">x</button>
+          <button @click="append(4)">4</button>
+          <button @click="append(5)">5</button>
+          <button @click="append(6)">6</button>
+          <button class="right" @click="substraction">-</button>
+          <button @click="append(1)">1</button>
+          <button @click="append(2)">2</button>
+          <button @click="append(3)">3</button>
+          <button class="right" @click="plus">+</button>
+          <button class="zero" @click="append(0)">0</button>
+          <button @click="dot">.</button>
+          <button class="right" @click="result">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "vue-calculator",
+  "version": "1.0.0",
+  "description": "my calculator apps created with only vue.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daivasmara/Vue-Calculator.git"
+  },
+  "author": "Muhammad Daivasmara Denaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daivasmara/Vue-Calculator/issues"
+  },
+  "homepage": "https://github.com/Daivasmara/Vue-Calculator#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {}
+}

@@ -1,2 +1,2 @@
 # Vue-Calculator
-My calculator apps created only using Vue.js.
+My calculator apps created with only Vue.js.
