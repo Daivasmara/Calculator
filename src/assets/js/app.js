@@ -2,6 +2,7 @@ new Vue({
   el: '#app',
   data: {
     display: '0',
+    predisplay: '',
     operators: '',
     number1: '',
     number2: ''
@@ -11,6 +12,12 @@ new Vue({
       if (this.display === '0'){
         this.display = '',
         this.display += number
+      } else if (this.display === 'Infinity') {
+        this.display = '',
+        this.display += number
+      } else if (this.display === this.number1) {
+        this.predisplay += number,
+        this.predisplay !== number ? this.display = this.predisplay : void(0)
       } else {
         this.display += number
       }
@@ -24,12 +31,14 @@ new Vue({
     },
     ac: function(){
       this.display = '0',
+      this.predisplay = '',
       this.operators = '',
       this.number1 = '',
       this.number2 = ''
     },
     backspace: function(){
-      this.display = this.display.slice(0, -1)
+      this.display = this.display.slice(0, -1),
+      this.display === '' ? this.display = '0' : void(0)
     },
     percent: function(){
       this.display = String(this.display/100),
@@ -37,22 +46,18 @@ new Vue({
     },
     division: function(){
       this.number1 = this.display,
-      this.display = '0',
       this.operators = '&#247;'
     },
     times: function(){
       this.number1 = this.display,
-      this.display = '0',
       this.operators = 'x'
     },
     substraction: function(){
       this.number1 = this.display,
-      this.display = '0',
       this.operators = '-'
     },
     plus: function(){
       this.number1 = this.display,
-      this.display = '0',
       this.operators = '+'
     },
     result: function(){
