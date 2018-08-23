@@ -1,32 +1,29 @@
 new Vue({
   el: '#app',
   data: {
-    display: '',
+    display: '0',
     operators: '',
     number1: '',
     number2: ''
   },
   methods: {
     append: function(number){
-      this.display += number
-    },
-    zero: function(){
-      if (this.display === '' || this.display === '0') {
-        this.display = this.display
+      if (this.display === '0'){
+        this.display = '',
+        this.display += number
       } else {
-        this.append('0')
+        this.display += number
       }
     },
     dot: function(){
-      if (this.display === '') {
-        this.append('0'),
-        this.append('.')
+      if (this.display === '0') {
+        this.append('0.')
       } else if (this.display.indexOf('.') === -1) {
         this.append('.')
       }
     },
     ac: function(){
-      this.display = '',
+      this.display = '0',
       this.operators = '',
       this.number1 = '',
       this.number2 = ''
@@ -40,22 +37,22 @@ new Vue({
     },
     division: function(){
       this.number1 = this.display,
-      this.display = '',
+      this.display = '0',
       this.operators = '&#247;'
     },
     times: function(){
       this.number1 = this.display,
-      this.display = '',
+      this.display = '0',
       this.operators = 'x'
     },
     substraction: function(){
       this.number1 = this.display,
-      this.display = '',
+      this.display = '0',
       this.operators = '-'
     },
     plus: function(){
       this.number1 = this.display,
-      this.display = '',
+      this.display = '0',
       this.operators = '+'
     },
     result: function(){

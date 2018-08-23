@@ -16,7 +16,7 @@
         <div class="grid-container col-md-12">
           <div class="display">
             <div class="operators" v-html="operators"></div>
-            {{ display === '' ? '0' : display }}
+            {{ display }}
           </div>
           <button class="top" @click="ac">AC</button>
           <button class="top" @click="backspace">&larr;</button>
@@ -34,7 +34,7 @@
           <button @click="append(2)">2</button>
           <button @click="append(3)">3</button>
           <button class="right" @click="plus">+</button>
-          <button class="zero" @click="zero">0</button>
+          <button class="zero" @click="append(0)">0</button>
           <button @click="dot">.</button>
           <button class="right" @click="result">=</button>
         </div>
