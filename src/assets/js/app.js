@@ -8,7 +8,14 @@ new Vue({
   },
   methods: {
     append: function(number){
-      this.display = this.display + number
+      this.display += number
+    },
+    zero: function(){
+      if (this.display === '' || this.display === '0') {
+        this.display = this.display
+      } else {
+        this.append('0')
+      }
     },
     dot: function(){
       if (this.display === '') {
@@ -20,7 +27,9 @@ new Vue({
     },
     ac: function(){
       this.display = '',
-      this.operators = ''
+      this.operators = '',
+      this.number1 = '',
+      this.number2 = ''
     },
     backspace: function(){
       this.display = this.display.slice(0, -1)
