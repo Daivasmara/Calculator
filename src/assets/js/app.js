@@ -3,15 +3,12 @@ new Vue({
   data: {
     display: '0',
     operators: '',
-    number1: '',
-    number2: ''
+    number1: '0',
+    number2: '0'
   },
   methods: {
     append: function(number){
-      if (this.display === '0'){
-        this.display = '',
-        this.display += number
-      } else if (this.display === 'Infinity') {
+      if (this.display === '0' || this.display === 'Infinity' || this.display === 'NaN'){
         this.display = '',
         this.display += number
       } else {
