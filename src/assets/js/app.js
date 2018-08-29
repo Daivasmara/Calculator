@@ -42,42 +42,33 @@ new Vue({
       this.display = String(this.display/100),
       this.operators = '%'
     },
-    division: function(){
+    formula: function(operators){
       this.operators === '+' ? this.display = String(parseFloat(this.number1)+parseFloat(this.display)) :
       this.operators === '-' ? this.display = String(parseFloat(this.number1)-parseFloat(this.display)) :
       this.operators === '&#247;' ? this.display =  String(parseFloat(this.number1)/parseFloat(this.display)) :
       this.operators === 'x' ? this.display =  String(parseFloat(this.number1)*parseFloat(this.display)) :
-      this.operators = '&#247;',
+      this.operators = operators
+    },
+    division: function(){
+      this.formula('&#247;'),
       this.operators = '&#247;',
       this.number1 = this.display,
       this.calculation = true
     },
     times: function(){
-      this.operators === '+' ? this.display = String(parseFloat(this.number1)+parseFloat(this.display)) :
-      this.operators === '-' ? this.display = String(parseFloat(this.number1)-parseFloat(this.display)) :
-      this.operators === '&#247;' ? this.display =  String(parseFloat(this.number1)/parseFloat(this.display)) :
-      this.operators === 'x' ? this.display =  String(parseFloat(this.number1)*parseFloat(this.display)) :
-      this.operators = 'x',
+      this.formula('x'),
       this.operators = 'x',
       this.number1 = this.display,
       this.calculation = true
     },
     substraction: function(){
-      this.operators === '+' ? this.display = String(parseFloat(this.number1)+parseFloat(this.display)) :
-      this.operators === '-' ? this.display = String(parseFloat(this.number1)-parseFloat(this.display)) :
-      this.operators === '&#247;' ? this.display =  String(parseFloat(this.number1)/parseFloat(this.display)) :
-      this.operators === 'x' ? this.display =  String(parseFloat(this.number1)*parseFloat(this.display)) :
-      this.operators = '-',
+      this.formula('-'),
       this.operators = '-',
       this.number1 = this.display,
       this.calculation = true
     },
     plus: function(){
-      this.operators === '+' ? this.display = String(parseFloat(this.number1)+parseFloat(this.display)) :
-      this.operators === '-' ? this.display = String(parseFloat(this.number1)-parseFloat(this.display)) :
-      this.operators === '&#247;' ? this.display =  String(parseFloat(this.number1)/parseFloat(this.display)) :
-      this.operators === 'x' ? this.display =  String(parseFloat(this.number1)*parseFloat(this.display)) :
-      this.operators = '+',
+      this.formula('+'),
       this.operators = '+',
       this.number1 = this.display,
       this.calculation = true
