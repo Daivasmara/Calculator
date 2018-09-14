@@ -5,10 +5,9 @@
   button{
     padding: 20px 0px;
     border: 1px solid #bdc3c7;
-    background-color: #dcdde1;
+    background-color: white;
     font-size: 2em;
-    font-weight: lighter;
-    color: #353b48;
+    font-weight: 100;
     &:hover{
       background-color: #2f3640;
       color: white;
@@ -31,8 +30,10 @@
   .zero{
     grid-column: 1/3;
   }
+  .top{
+    background-color: #ecf0f1;
+  }
   .right{
-    font-size: 2.5em;
     background-color: #e67e22;
     color: white;
   }
