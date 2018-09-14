@@ -13,12 +13,12 @@
   <div id="app">
     <div class="container">
       <div class="row">
-        <div class="grid-container col-md-12">
+        <div class="grid-container col-md-6 offset-md-3">
           <div class="display">
             <div class="operators" v-html="operators"></div>
             {{ display }}
           </div>
-          <button class="top" @click="ac">AC</button>
+          <button class="top" @click="ac">C</button>
           <button class="top" @click="backspace">&larr;</button>
           <button class="top" @click="percent">%</button>
           <button class="right" @click="division">&#247;</button>
