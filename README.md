@@ -13,7 +13,7 @@ npm install
 gulp
 ```
 
-## GIF :
+## GIF
 ![GIF](screenshoots/ss.gif)
 
 ## Built With
