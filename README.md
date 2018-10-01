@@ -7,5 +7,5 @@ My calculator app created with only Vue.js. I was browsing Youtube when i saw [f
 > gulp
 ```
 
-## Screenshoots :
-![Attacking Screenshoots](screenshoots/1.png)
+## GIF :
+![GIF](screenshoots/ss.gif)
